@@ -3,8 +3,6 @@ import React from 'react'
 import S from '@sanity/desk-tool/structure-builder'
 const blocksToHtml = require('@sanity/block-content-to-html')
 import { Code } from '@sanity/UI'
-import documentStore from 'part:@sanity/base/datastore/document'
-import { map } from 'rxjs/operators'
 import QueryContainer from 'part:@sanity/base/query-container'
 
 
