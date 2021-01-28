@@ -26,17 +26,15 @@ const JsonPreview = ({ document }) => {
       blocks: document.displayed.opening,
       serializers: serializers
     })
-    console.log(bodyHTML)
     return (
       <Code size={3} language="html">
-        ${bodyHTML}
+        {bodyHTML}
       </Code>
     )
   }
   const Bookmarks = () => (
     <QueryContainer query={`*[_id == $newsletterId]{bookmarks[]->}[0].bookmarks`} params={{newsletterId: document.displayed._id}}>
       {({result, loading, error, onRetry}) => {
-        console.log(result)
         if (loading) return `loading`
         if (error) return `error ${error}`
 
