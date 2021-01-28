@@ -26,6 +26,7 @@ const JsonPreview = ({ document }) => {
       blocks: document.displayed.opening,
       serializers: serializers
     })
+    console.log(bodyHTML)
     return (
       <Code size={3} language="html">
         ${bodyHTML}
@@ -65,7 +66,6 @@ ${result?.documents.map(bookmark => `<h3><a href="${bookmark.url}">${bookmark.pa
     <Bookmarks />
     <Code size={3} language="html">
       {`
-<h3 style="font-size: 20px;"><a href="{{ item.url }}">{{ item.pageTitle }}</a></h3>
       
 <hr style="margin: 20px 0;" />
 
