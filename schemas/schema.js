@@ -6,6 +6,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 import bookmark from './documents/bookmark'
 import newsletter from './documents/newsletter'
+import blog from './documents/post'
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -15,7 +16,8 @@ export default createSchema({
   types: schemaTypes.concat([
     /* Your types here! */
     bookmark,
-    newsletter
+    newsletter,
+    blog
     
   ]),
 })
